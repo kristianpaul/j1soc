@@ -1,0 +1,754 @@
+for i in `echo soc.v`; do \
+	    echo "verilog soc $i" >> soc.prj; \
+	done
+echo run > soc.xst
+echo -ifn soc.prj >> soc.xst
+echo -top soc >> soc.xst
+echo -ifmt MIXED >> soc.xst
+echo -opt_mode SPEED >> soc.xst
+echo -opt_level 1 >> soc.xst
+echo -ofn soc.ngc >> soc.xst
+echo -p xc6slx9-2-tqg144 >> soc.xst
+xst -ifn soc.xst
+Release 13.4 - xst O.87xd (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "soc.prj"
+Input Format                       : MIXED
+
+---- Target Parameters
+Output File Name                   : "soc.ngc"
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : soc
+
+---- General Options
+Optimization Goal                  : SPEED
+Optimization Effort                : 1
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/paul/j1-soc/soc.v" into library soc
+Parsing module <j1>.
+Parsing module <reset_gen>.
+Parsing module <soc>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/paul/j1-soc/soc.v" Line 301: Port DOPA is not connected to this instance
+
+Elaborating module <soc>.
+
+Elaborating module <reset_gen(RESET_CYCLES=10000)>.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 213: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:1016 - "/home/paul/j1-soc/soc.v" Line 49: Port SSRA is not connected to this instance
+
+Elaborating module <j1>.
+
+Elaborating module <RAMB16_S2_S2>.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 51: Size mismatch in connection of port <DIA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 54: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 55: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <ADDRB>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 109: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 136: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 148: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 153: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 174: Result of 15-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 176: Result of 16-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:1127 - "/home/paul/j1-soc/soc.v" Line 268: Assignment to j1_io_rd ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 280: Result of 32-bit expression is truncated to fit in 9-bit target.
+
+Elaborating module <RAMB16_S18_S18>.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 302: Size mismatch in connection of port <DIA>. Formal port size is 16-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 303: Size mismatch in connection of port <DIPA>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 305: Size mismatch in connection of port <WEA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 306: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 308: Size mismatch in connection of port <ADDRA>. Formal port size is 10-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 313: Size mismatch in connection of port <ENB>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 315: Size mismatch in connection of port <ADDRB>. Formal port size is 10-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 321: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "/home/paul/j1-soc/soc.v" Line 364: Assignment to trig_reconf ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <soc>.
+    Related source file is "/home/paul/j1-soc/soc.v".
+INFO:Xst:3210 - "/home/paul/j1-soc/soc.v" line 261: Output port <io_rd> of the instance <j1> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <xorline_addr>.
+    Found 16-bit register for signal <slow_io_addr>.
+    Found 16-bit register for signal <slow_io_dout>.
+    Found 1-bit register for signal <trig_reset>.
+    Found 1-bit register for signal <led>.
+    Found 16-bit adder for signal <xorline_addr[15]_GND_1_o_add_15_OUT> created at line 321.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <soc> synthesized.
+
+Synthesizing Unit <reset_gen>.
+    Related source file is "/home/paul/j1-soc/soc.v".
+        RESET_CYCLES = 10000
+    Found 14-bit register for signal <reset_count>.
+    Found 14-bit subtractor for signal <GND_2_o_GND_2_o_sub_3_OUT<13:0>> created at line 213.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+Unit <reset_gen> synthesized.
+
+Synthesizing Unit <j1>.
+    Related source file is "/home/paul/j1-soc/soc.v".
+    Found 32x16-bit dual-port RAM <Mram_dstack> for signal <dstack>.
+    Found 32x16-bit dual-port RAM <Mram_rstack> for signal <rstack>.
+    Found 5-bit register for signal <dsp>.
+    Found 16-bit register for signal <st0>.
+    Found 5-bit register for signal <rsp>.
+    Found 13-bit register for signal <pc>.
+    Found 14-bit adder for signal <n0166[13:0]> created at line 37.
+    Found 16-bit adder for signal <st0[15]_st1[15]_add_32_OUT> created at line 101.
+    Found 5-bit adder for signal <dsp[4]_GND_3_o_add_54_OUT> created at line 136.
+    Found 5-bit adder for signal <dsp[4]_dd[1]_add_55_OUT> created at line 141.
+    Found 5-bit adder for signal <rsp[4]_rd[1]_add_56_OUT> created at line 142.
+    Found 5-bit adder for signal <rsp[4]_GND_3_o_add_61_OUT> created at line 153.
+    Found 16-bit subtractor for signal <GND_3_o_GND_3_o_sub_41_OUT<15:0>> created at line 109.
+    Found 5-bit subtractor for signal <GND_3_o_GND_3_o_sub_59_OUT<4:0>> created at line 148.
+    Found 16-bit shifter logical right for signal <st1[15]_st0[3]_shift_right_39_OUT> created at line 108
+    Found 16-bit shifter logical left for signal <st1[15]_st0[3]_shift_left_43_OUT> created at line 112
+    Found 16-bit 16-to-1 multiplexer for signal <st0sel[3]_st1[15]_wide_mux_45_OUT> created at line 98.
+    Found 5-bit 4-to-1 multiplexer for signal <_n0205> created at line 145.
+    Found 5-bit 3-to-1 multiplexer for signal <_n0207> created at line 145.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0209> created at line 145.
+    Found 16-bit comparator equal for signal <st1[15]_st0[15]_equal_38_o> created at line 106
+    Found 16-bit comparator greater for signal <st0[15]_st1[15]_LessThan_39_o> created at line 107
+    Found 16-bit comparator greater for signal <st1[15]_st0[15]_LessThan_45_o> created at line 114
+    Summary:
+	inferred   2 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  41 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <j1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x16-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 7
+ 14-bit adder                                          : 1
+ 14-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
+ 16-bit addsub                                         : 1
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 1
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 13-bit register                                       : 1
+ 14-bit register                                       : 1
+ 16-bit register                                       : 4
+ 5-bit register                                        : 2
+# Comparators                                          : 3
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 42
+ 1-bit 2-to-1 multiplexer                              : 5
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 26
+ 16-bit 3-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 7
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 16-bit xor2                                           : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <j1>.
+The following registers are absorbed into counter <dsp>: 1 register on signal <dsp>.
+INFO:Xst:3231 - The small RAM <Mram_rstack> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     weA            | connected to signal <_rstkW>        | high     |
+    |     addrA          | connected to signal <_rsp>          |          |
+    |     diA            | connected to signal <_rstkD>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     addrB          | connected to signal <rsp>           |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dstack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     weA            | connected to signal <_dstkW>        | high     |
+    |     addrA          | connected to signal <_dsp>          |          |
+    |     diA            | connected to signal <st0>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     addrB          | connected to signal <dsp>           |          |
+    |     doB            | connected to signal <io_dout>       |          |
+    -----------------------------------------------------------------------
+Unit <j1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <reset_gen>.
+The following registers are absorbed into counter <reset_count>: 1 register on signal <reset_count>.
+Unit <reset_gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <soc>.
+The following registers are absorbed into counter <xorline_addr>: 1 register on signal <xorline_addr>.
+Unit <soc> synthesized (advanced).
+WARNING:Xst:2677 - Node <slow_io_dout_1> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_2> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_3> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_4> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_5> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_6> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_7> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_8> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_9> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_10> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_11> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_12> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_13> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_14> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <slow_io_dout_15> of sequential type is unconnected in block <soc>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x16-bit dual-port distributed RAM                   : 2
+# Adders/Subtractors                                   : 5
+ 14-bit adder                                          : 1
+ 16-bit addsub                                         : 1
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 1
+# Counters                                             : 3
+ 14-bit down counter                                   : 1
+ 16-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+# Comparators                                          : 3
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 54
+ 1-bit 2-to-1 multiplexer                              : 18
+ 13-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 26
+ 16-bit 3-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 7
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 16-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <trig_reset> (without init value) has a constant value of 0 in block <soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <xorline_addr_10> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <xorline_addr_11> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <xorline_addr_12> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <xorline_addr_13> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <xorline_addr_14> of sequential type is unconnected in block <soc>.
+WARNING:Xst:2677 - Node <xorline_addr_15> of sequential type is unconnected in block <soc>.
+INFO:Xst:1901 - Instance ram[0].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[1].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[2].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[3].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[4].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[5].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[6].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance ram[7].ram in unit j1 of type RAMB16_S2_S2 has been replaced by RAMB16BWER
+INFO:Xst:1901 - Instance xorline_ram in unit soc of type RAMB16_S18_S18 has been replaced by RAMB16BWER
+
+Optimizing unit <soc> ...
+
+Optimizing unit <j1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block soc, actual ratio is 8.
+FlipFlop j1/dsp_0 has been replicated 1 time(s)
+FlipFlop j1/dsp_2 has been replicated 1 time(s)
+FlipFlop j1/st0_0 has been replicated 1 time(s)
+FlipFlop j1/st0_1 has been replicated 2 time(s)
+FlipFlop j1/st0_12 has been replicated 1 time(s)
+FlipFlop j1/st0_14 has been replicated 1 time(s)
+FlipFlop j1/st0_15 has been replicated 1 time(s)
+FlipFlop j1/st0_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 90
+ Flip-Flops                                            : 90
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : soc.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 619
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 22
+#      LUT2                        : 28
+#      LUT3                        : 43
+#      LUT4                        : 71
+#      LUT5                        : 75
+#      LUT6                        : 220
+#      MUXCY                       : 80
+#      MUXF7                       : 10
+#      VCC                         : 1
+#      XORCY                       : 53
+# FlipFlops/Latches                : 90
+#      FDE                         : 18
+#      FDR                         : 48
+#      FDRE                        : 19
+#      FDSE                        : 5
+# RAMS                             : 21
+#      RAM32M                      : 4
+#      RAM32X1D                    : 8
+#      RAMB16BWER                  : 9
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              90  out of  11440     0%  
+ Number of Slice LUTs:                  506  out of   5720     8%  
+    Number used as Logic:               474  out of   5720     8%  
+    Number used as Memory:               32  out of   1440     2%  
+       Number used as RAM:               32
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    530
+   Number with an unused Flip Flop:     440  out of    530    83%  
+   Number with an unused LUT:            24  out of    530     4%  
+   Number of fully used LUT-FF pairs:    66  out of    530    12%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    102     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                9  out of     32    28%  
+    Number using Block RAM only:          9
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 111   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 11.935ns (Maximum Frequency: 83.788MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 11.935ns (frequency: 83.788MHz)
+  Total number of paths / destination ports: 2239667 / 638
+-------------------------------------------------------------------------
+Delay:               11.935ns (Levels of Logic = 20)
+  Source:            j1/ram[6].ram (RAM)
+  Destination:       j1/ram[7].ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: j1/ram[6].ram to j1/ram[7].ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA1   89   2.100   2.232  j1/ram[6].ram (j1/insn<13>)
+     LUT3:I1->O           12   0.250   1.297  j1/Mmux_st0sel<3>11_2 (j1/Mmux_st0sel<3>11_1)
+     LUT6:I3->O            2   0.235   0.954  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_A47 (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_A46)
+     LUT6:I3->O            1   0.235   0.682  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_lut<0>_SW0 (N179)
+     LUT6:I5->O            1   0.254   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_lut<0> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<0> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<1> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<2> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<3> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<4> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<5> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<6> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<7> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<8> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<9> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<10> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<11> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<12> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<13> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_cy<13>)
+     XORCY:CI->O           3   0.206   0.874  j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_rs_xor<14> (j1/Mmux_st0sel[3]_st1[15]_wide_mux_45_OUT15_split<14>)
+     LUT6:I4->O           32   0.250   1.519  j1/ramWE_GND_3_o_AND_1_o1 (j1/ramWE_GND_3_o_AND_1_o)
+     RAMB16BWER:WEB0           0.330          j1/ram[7].ram
+    ----------------------------------------
+    Total                     11.935ns (4.377ns logic, 7.558ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            led (FF)
+  Destination:       led (PAD)
+  Source Clock:      clk rising
+
+  Data Path: led to led
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   0.681  led (led_OBUF)
+     OBUF:I->O                 2.912          led_OBUF (led)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   11.935|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 44.53 secs
+ 
+--> 
+
+
+Total memory usage is 117160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   74 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+
+ngdbuild -uc soc.xc6slx9-2-tqg144.ucf soc.ngc
+Release 13.4 - ngdbuild O.87xd (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild -uc
+soc.xc6slx9-2-tqg144.ucf soc.ngc
+
+Reading NGO file "/home/paul/j1-soc/soc.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "soc.xc6slx9-2-tqg144.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGD file "soc.ngd" ...
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   15 sec
+
+Writing NGDBUILD log file "soc.bld"...
+
+NGDBUILD done.
+map -w soc.ngd
+Release 13.4 - Map O.87xd (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Using target part "6slx9tqg144-2".
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc6slx9' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+Mapping design into LUTs...
+Writing file soc.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 16 secs 
+Total CPU  time at the beginning of Placer: 16 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:a8f683e) REAL time: 18 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:a8f683e) REAL time: 18 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:a8f683e) REAL time: 18 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:ea42981a) REAL time: 28 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:ea42981a) REAL time: 28 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:ea42981a) REAL time: 28 secs 
+
+Phase 7.3  Local Placement Optimization
+Phase 7.3  Local Placement Optimization (Checksum:ea42981a) REAL time: 28 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:ea42981a) REAL time: 28 secs 
+
+Phase 9.8  Global Placement
+........................................................................................................................
+...................................................
+..............................................................................................................................
+.................................
+Phase 9.8  Global Placement (Checksum:797926fd) REAL time: 38 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:797926fd) REAL time: 38 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:7528ad4e) REAL time: 51 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:7528ad4e) REAL time: 51 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:744fc0d0) REAL time: 51 secs 
+
+Total REAL time to Placer completion: 52 secs 
+Total CPU  time to Placer completion: 51 secs 
+Running post-placement packing...
+Writing output files...
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<xorline_ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<xorline_ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[0].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[0].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[1].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[1].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[2].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[2].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[3].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[3].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[4].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[4].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[5].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[5].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[6].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[6].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1678 - Issue with pin connections and/or configuration on
+   block:<j1/ram[7].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_A
+   attribute the port A control pins for the RAMB16BWER must be used.
+ERROR:PhysDesignRules:1679 - Issue with pin connections and/or configuration on
+   block:<j1/ram[7].ram>:<RAMB16BWER_RAMB16BWER>.  When using the DATA_WIDTH_B
+   attribute the port B control pins for the RAMB16BWER must be used.
+ERROR:Pack:1642 - Errors in physical DRC.
+
+Mapping completed.
+See MAP report file "soc.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :  19
+Number of warnings :   4
+rm soc.xst soc.ngd soc.prj soc.ngc
