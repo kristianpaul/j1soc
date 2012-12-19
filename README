@@ -1,0 +1,3 @@
+j1 minimal soc, derived from wge100 camera
+
+the only purpose of the this soc is to blink a led using j1 cpu and forth
