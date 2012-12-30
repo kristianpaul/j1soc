@@ -46,20 +46,32 @@ module j1(
   generate 
     for (i = 0; i < (1 << `RAMS); i=i+1) begin : ram
       // RAMB16_S18_S18
-      RAMB16_S2_S2
+      RAMB16BWER #(
+    .DATA_WIDTH_A(36),
+    .DATA_WIDTH_B(9),
+    .DOA_REG(0),
+    .DOB_REG(0),
+    .EN_RSTRAM_A("FALSE"),
+    .EN_RSTRAM_B("FALSE"),
+    .SIM_DEVICE("SPARTAN6"),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST")
+)
       ram(
         .DIA(0),
-        // .DIPA(0),
+        .DIPA(0),
         .DOA(insn[`w*i+`w1:`w*i]),
         .WEA(0),
         .ENA(1),
+	.RSTA(1'b0),
         .CLKA(sys_clk_i),
         .ADDRA({_pc}),
 
         .DIB(st1[`w*i+`w1:`w*i]),
-        // .DIPB(2'b0),
+        .DIPB(0),
         .WEB(_ramWE & (_st0[15:14] == 0)),
         .ENB(|_st0[15:14] == 0),
+	.RSTB(1'b0),
         .CLKB(sys_clk_i),
         .ADDRB(_st0[15:1]),
         .DOB(ramrd[`w*i+`w1:`w*i]));
@@ -298,12 +310,24 @@ module soc(
   wire [15:0] xorline_prev;
   reg [15:0] xorline_addr;
 
-  RAMB16_S18_S18 xorline_ram(
+  RAMB16BWER #(
+    .DATA_WIDTH_A(36),
+    .DATA_WIDTH_B(9),
+    .DOA_REG(0),
+    .DOB_REG(0),
+    .EN_RSTRAM_A("FALSE"),
+    .EN_RSTRAM_B("FALSE"),
+    .SIM_DEVICE("SPARTAN6"),
+    .WRITE_MODE_A("WRITE_FIRST"),
+    .WRITE_MODE_B("WRITE_FIRST")
+)
+ xorline_ram(   
     .DIA(0),
     .DIPA(0),
     .DOA(xorline_rd),
     .WEA(0),
     .ENA(1),
+    .RSTA(1'b0),
     .CLKA(clk),
     .ADDRA(j1_io_addr[15:1]),
 
@@ -311,6 +335,7 @@ module soc(
     .DIPB(2'b00),
     .WEB((j1_io_addr == 16'h5f00) & j1_io_wr),
     .ENB(1),
+    .RSTB(1'b0),
     .CLKB(clk),
     .ADDRB(xorline_addr),
     .DOB(xorline_prev));
