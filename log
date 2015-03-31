@@ -10,8 +10,8 @@ echo -opt_level 1 >> soc.xst
 echo -ofn soc.ngc >> soc.xst
 echo -p xc6slx9-2-tqg144 >> soc.xst
 xst -ifn soc.xst
-Release 13.4 - xst O.87xd (lin)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 TABLE OF CONTENTS
@@ -56,12 +56,11 @@ Optimization Effort                : 1
 
 =========================================================================
 
-INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/paul/j1-soc/soc.v" into library soc
+Analyzing Verilog file "/home/paul/j1soc/soc.v" into library soc
 Parsing module <j1>.
 Parsing module <reset_gen>.
 Parsing module <soc>.
@@ -69,126 +68,126 @@ Parsing module <soc>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/paul/j1-soc/soc.v" Line 313: Port DOPA is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/paul/j1soc/soc.v" Line 313: Port DOPA is not connected to this instance
 
 Elaborating module <soc>.
 
 Elaborating module <reset_gen(RESET_CYCLES=10000)>.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 225: Result of 32-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:1016 - "/home/paul/j1-soc/soc.v" Line 49: Port DOPA is not connected to this instance
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 225: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:1016 - "/home/paul/j1soc/soc.v" Line 49: Port DOPA is not connected to this instance
 
 Elaborating module <j1>.
 
 Elaborating module <RAMB16BWER(DATA_WIDTH_A=36,DATA_WIDTH_B=9,DOA_REG=0,DOB_REG=0,EN_RSTRAM_A="FALSE",EN_RSTRAM_B="FALSE",SIM_DEVICE="SPARTAN6",WRITE_MODE_A="WRITE_FIRST",WRITE_MODE_B="WRITE_FIRST")>.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 121: Result of 32-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 148: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 160: Result of 32-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 165: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 186: Result of 15-bit expression is truncated to fit in 13-bit target.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 188: Result of 16-bit expression is truncated to fit in 13-bit target.
-WARNING:HDLCompiler:1127 - "/home/paul/j1-soc/soc.v" Line 280: Assignment to j1_io_rd ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 292: Result of 32-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 326: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 327: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 328: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 329: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 332: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 15-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 334: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 335: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 336: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 337: Size mismatch in connection of port <ENB>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 340: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:189 - "/home/paul/j1-soc/soc.v" Line 341: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:413 - "/home/paul/j1-soc/soc.v" Line 346: Result of 17-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:1127 - "/home/paul/j1-soc/soc.v" Line 389: Assignment to trig_reconf ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 62: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 63: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 64: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 65: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 68: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 70: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 71: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 72: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 76: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 77: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 121: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 148: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 160: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 165: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 186: Result of 15-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 188: Result of 16-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:1127 - "/home/paul/j1soc/soc.v" Line 280: Assignment to j1_io_rd ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 292: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 326: Size mismatch in connection of port <DIPA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 327: Size mismatch in connection of port <DOA>. Formal port size is 32-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 328: Size mismatch in connection of port <WEA>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 329: Size mismatch in connection of port <ENA>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 332: Size mismatch in connection of port <ADDRA>. Formal port size is 14-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 334: Size mismatch in connection of port <DIB>. Formal port size is 32-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 335: Size mismatch in connection of port <DIPB>. Formal port size is 4-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 336: Size mismatch in connection of port <WEB>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 337: Size mismatch in connection of port <ENB>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 340: Size mismatch in connection of port <ADDRB>. Formal port size is 14-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "/home/paul/j1soc/soc.v" Line 341: Size mismatch in connection of port <DOB>. Formal port size is 32-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:413 - "/home/paul/j1soc/soc.v" Line 346: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "/home/paul/j1soc/soc.v" Line 389: Assignment to trig_reconf ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <soc>.
-    Related source file is "/home/paul/j1-soc/soc.v".
-INFO:Xst:3210 - "/home/paul/j1-soc/soc.v" line 273: Output port <io_rd> of the instance <j1> is unconnected or connected to loadless signal.
+    Related source file is "/home/paul/j1soc/soc.v".
+INFO:Xst:3210 - "/home/paul/j1soc/soc.v" line 273: Output port <io_rd> of the instance <j1> is unconnected or connected to loadless signal.
     Found 16-bit register for signal <xorline_addr>.
     Found 16-bit register for signal <slow_io_addr>.
     Found 16-bit register for signal <slow_io_dout>.
@@ -202,7 +201,7 @@ INFO:Xst:3210 - "/home/paul/j1-soc/soc.v" line 273: Output port <io_rd> of the i
 Unit <soc> synthesized.
 
 Synthesizing Unit <reset_gen>.
-    Related source file is "/home/paul/j1-soc/soc.v".
+    Related source file is "/home/paul/j1soc/soc.v".
         RESET_CYCLES = 10000
     Found 14-bit register for signal <reset_count>.
     Found 14-bit subtractor for signal <GND_2_o_GND_2_o_sub_3_OUT<13:0>> created at line 225.
@@ -212,7 +211,7 @@ Synthesizing Unit <reset_gen>.
 Unit <reset_gen> synthesized.
 
 Synthesizing Unit <j1>.
-    Related source file is "/home/paul/j1-soc/soc.v".
+    Related source file is "/home/paul/j1soc/soc.v".
     Found 32x16-bit dual-port RAM <Mram_dstack> for signal <dstack>.
     Found 32x16-bit dual-port RAM <Mram_rstack> for signal <rstack>.
     Found 5-bit register for signal <dsp>.
@@ -601,26 +600,26 @@ clk            |   11.526|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 45.00 secs
-Total CPU time to Xst completion: 44.64 secs
+Total REAL time to Xst completion: 39.00 secs
+Total CPU time to Xst completion: 37.08 secs
  
 --> 
 
 
-Total memory usage is 117444 kilobytes
+Total memory usage is 379428 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  122 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 
 ngdbuild -uc soc.xc6slx9-2-tqg144.ucf soc.ngc
-Release 13.4 - ngdbuild O.87xd (lin)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.6 - ngdbuild P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild -uc
+Command Line: /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -uc
 soc.xc6slx9-2-tqg144.ucf soc.ngc
 
-Reading NGO file "/home/paul/j1-soc/soc.ngc" ...
+Reading NGO file "/home/paul/j1soc/soc.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -643,22 +642,16 @@ NGDBUILD Design Results Summary:
   Number of warnings:   0
 
 Writing NGD file "soc.ngd" ...
-Total REAL time to NGDBUILD completion:  16 sec
+Total REAL time to NGDBUILD completion:  15 sec
 Total CPU time to NGDBUILD completion:   15 sec
 
 Writing NGDBUILD log file "soc.bld"...
 
 NGDBUILD done.
 map -w soc.ngd
-Release 13.4 - Map O.87xd (lin)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.6 - Map P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Using target part "6slx9tqg144-2".
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:54 - 'xc6slx9' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
-----------------------------------------------------------------------
 Mapping design into LUTs...
 Writing file soc.ngm...
 Running directed packing...
@@ -667,56 +660,56 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 16 secs 
-Total CPU  time at the beginning of Placer: 16 secs 
+Total REAL time at the beginning of Placer: 12 secs 
+Total CPU  time at the beginning of Placer: 11 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:54e11a26) REAL time: 18 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:54e11a26) REAL time: 14 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:54e11a26) REAL time: 18 secs 
+Phase 2.7  Design Feasibility Check (Checksum:54e11a26) REAL time: 14 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:54e11a26) REAL time: 18 secs 
+Phase 3.31  Local Placement Optimization (Checksum:54e11a26) REAL time: 14 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:75c03fd7) REAL time: 28 secs 
+(Checksum:75c03fd7) REAL time: 20 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:75c03fd7) REAL time: 28 secs 
+Phase 5.36  Local Placement Optimization (Checksum:75c03fd7) REAL time: 20 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:75c03fd7) REAL time: 28 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:75c03fd7) REAL time: 20 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:75c03fd7) REAL time: 28 secs 
+Phase 7.3  Local Placement Optimization (Checksum:75c03fd7) REAL time: 20 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:75c03fd7) REAL time: 28 secs 
+Phase 8.5  Local Placement Optimization (Checksum:75c03fd7) REAL time: 20 secs 
 
 Phase 9.8  Global Placement
 ...............................................................................................................
 ..........................................................................................................................
 ................................................................................................................................................................................
 ....................
-Phase 9.8  Global Placement (Checksum:e9c7cbdf) REAL time: 37 secs 
+Phase 9.8  Global Placement (Checksum:e9c7cbdf) REAL time: 26 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:e9c7cbdf) REAL time: 37 secs 
+Phase 10.5  Local Placement Optimization (Checksum:e9c7cbdf) REAL time: 27 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:4cad8f5b) REAL time: 1 mins 11 secs 
+Phase 11.18  Placement Optimization (Checksum:4cad8f5b) REAL time: 51 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:4cad8f5b) REAL time: 1 mins 11 secs 
+Phase 12.5  Local Placement Optimization (Checksum:4cad8f5b) REAL time: 51 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:4cad8f5b) REAL time: 1 mins 11 secs 
+Phase 13.34  Placement Validation (Checksum:4cad8f5b) REAL time: 51 secs 
 
-Total REAL time to Placer completion: 1 mins 11 secs 
-Total CPU  time to Placer completion: 1 mins 10 secs 
+Total REAL time to Placer completion: 51 secs 
+Total CPU  time to Placer completion: 48 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -749,7 +742,7 @@ Slice Logic Utilization:
 
 Slice Logic Distribution:
   Number of occupied Slices:                   151 out of   1,430   10%
-  Nummber of MUXCYs used:                      100 out of   2,860    3%
+  Number of MUXCYs used:                       100 out of   2,860    3%
   Number of LUT Flip Flop pairs used:          484
     Number with an unused Flip Flop:           398 out of     484   82%
     Number with an unused LUT:                  13 out of     484    2%
@@ -795,27 +788,21 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.53
 
-Peak Memory Usage:  226 MB
-Total REAL time to MAP completion:  1 mins 13 secs 
-Total CPU time to MAP completion:   1 mins 12 secs 
+Peak Memory Usage:  662 MB
+Total REAL time to MAP completion:  52 secs 
+Total CPU time to MAP completion:   50 secs 
 
 Mapping completed.
 See MAP report file "soc.mrp" for details.
 par -w soc.ncd soc-routed.ncd
-Release 13.4 - par O.87xd (lin)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.6 - par P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 
 Constraints file: soc.pcf.
-Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/13.4/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/14.6/ISE_DS/ISE/.
    "soc" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:54 - 'xc6slx9' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
-to function, but you no longer qualify for Xilinx software updates or new releases.
-
-----------------------------------------------------------------------
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
@@ -826,7 +813,7 @@ INFO:Par:282 - No user timing constraints were detected or you have set the opti
    reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
    Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
-Device speed data version:  "PRODUCTION 1.21 2012-01-07".
+Device speed data version:  "PRODUCTION 1.23 2013-06-08".
 
 
 
@@ -858,7 +845,7 @@ Slice Logic Utilization:
 
 Slice Logic Distribution:
   Number of occupied Slices:                   151 out of   1,430   10%
-  Nummber of MUXCYs used:                      100 out of   2,860    3%
+  Number of MUXCYs used:                       100 out of   2,860    3%
   Number of LUT Flip Flop pairs used:          484
     Number with an unused Flip Flop:           398 out of     484   82%
     Number with an unused LUT:                  13 out of     484    2%
@@ -905,8 +892,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   Standard 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 12 secs 
-Finished initial Timing Analysis.  REAL time: 12 secs 
+Starting initial Timing Analysis.  REAL time: 9 secs 
+Finished initial Timing Analysis.  REAL time: 9 secs 
 
 WARNING:Par:288 - The signal j1/Mram_dstack2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal j1/Mram_rstack1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -915,29 +902,29 @@ WARNING:Par:288 - The signal j1/Mram_dstack1_RAMD_D1_O has no load.  PAR will no
 Starting Router
 
 
-Phase  1  : 3561 unrouted;      REAL time: 12 secs 
+Phase  1  : 3561 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 2667 unrouted;      REAL time: 13 secs 
+Phase  2  : 2667 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 1323 unrouted;      REAL time: 16 secs 
+Phase  3  : 1323 unrouted;      REAL time: 12 secs 
 
-Phase  4  : 1323 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  4  : 1323 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
 Updating file: soc-routed.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
-Total REAL time to Router completion: 24 secs 
-Total CPU time to Router completion: 24 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Total REAL time to Router completion: 17 secs 
+Total CPU time to Router completion: 16 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -976,10 +963,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 4 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 25 secs 
-Total CPU time to PAR completion: 25 secs 
+Total REAL time to PAR completion: 18 secs 
+Total CPU time to PAR completion: 17 secs 
 
-Peak Memory Usage:  176 MB
+Peak Memory Usage:  620 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
@@ -994,13 +981,13 @@ Writing design to file soc-routed.ncd
 
 PAR done!
 if test -f soc-routed.ncd; then bitgen -b -l -w soc-routed.ncd soc.bit; fi
-Release 13.4 - Bitgen O.87xd (lin)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.6 - Bitgen P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Loading device for application Rf_Device from file '6slx9.nph' in environment
-/opt/Xilinx/13.4/ISE_DS/ISE/.
+/opt/Xilinx/14.6/ISE_DS/ISE/.
    "soc" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
-Sun Dec 30 16:25:48 2012
+Mon Mar 30 20:02:46 2015
 
 Running DRC.
 WARNING:PhysDesignRules:367 - The signal <j1/Mram_dstack2_RAMD_D1_O> is
@@ -1103,11 +1090,6 @@ WARNING:PhysDesignRules:1630 - Issue with pin connections and/or configuration
    ADDRB2 pins) must be tied to ground or left unconnected.
 DRC detected 0 errors and 22 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
-INFO:Security:54 - 'xc6slx9' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
-
 Saving ll file in "soc.ll".
 Creating bit map...
 Saving bit stream in "soc.bit".
